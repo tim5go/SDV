@@ -268,8 +268,8 @@ class HMA1(BaseRelationalModel):
                             table_rows[foreign_key] = parent_ids
 
             dtypes = self.metadata.get_dtypes(table_name, ids=True)
-            for name, dtype in dtypes.items():
-                table_rows[name] = table_rows[name].dropna().astype(dtype)
+            # for name, dtype in dtypes.items():
+            #     table_rows[name] = table_rows[name].dropna().astype(dtype)
 
             final_data[table_name] = table_rows[list(dtypes.keys())]
 
